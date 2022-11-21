@@ -84,9 +84,12 @@ class _DadosPageState extends State<DadosPage> {
               padding: const EdgeInsets.all(10.0),
               child: ElevatedButton(
                 style: const ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll<Color>(Colors.grey),
+                  backgroundColor: MaterialStatePropertyAll<Color>(Colors.white),
                 ),
-                child: const Text("⚔ Battle ⚔"),
+                child: const Text(
+                  "CLASH",
+                  style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
+                ),
                 onPressed: () {
                   setState(() {
                     defenderLostTroops = 0;
