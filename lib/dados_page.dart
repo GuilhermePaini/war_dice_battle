@@ -103,12 +103,12 @@ class _DadosPageState extends State<DadosPage> {
 
                     for (var i = 0; i < attackersDice.length; i++) {
                       if (attackersDice[i] > defendersDice[i]) {
-                        defenderLostTroops -= attackersDice[i] - defendersDice[i];
+                        defenderLostTroops--;
                         continue;
                       }
 
                       if (attackersDice[i] < defendersDice[i]) {
-                        attackersLostTroops -= defendersDice[i] - attackersDice[i];
+                        attackersLostTroops--;
                         continue;
                       }
                     }

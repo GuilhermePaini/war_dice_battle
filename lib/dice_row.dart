@@ -16,16 +16,16 @@ class _DiceRowState extends State<DiceRow> {
     const labelFontSize = 20.0;
 
     if (widget.attackersDice > widget.defendersDice) {
-      return Text(
-        '- ${(widget.attackersDice - widget.defendersDice).toString()}',
-        style: const TextStyle(color: Colors.yellow, fontWeight: labelFontWeight, fontSize: labelFontSize),
+      return const Text(
+        '-1',
+        style: TextStyle(color: Colors.yellow, fontWeight: labelFontWeight, fontSize: labelFontSize),
       );
     }
 
     if (widget.attackersDice < widget.defendersDice) {
-      return Text(
-        '- ${(widget.defendersDice - widget.attackersDice).toString()}',
-        style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontSize: labelFontSize),
+      return const Text(
+        '-1',
+        style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontSize: labelFontSize),
       );
     }
 
