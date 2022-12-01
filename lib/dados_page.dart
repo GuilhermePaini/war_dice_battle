@@ -13,13 +13,10 @@ class DadosPage extends StatefulWidget {
 
 class _DadosPageState extends State<DadosPage> {
   var attackersDice = List.generate(3, (index) => index = Random().nextInt(6) + 1);
-
   var defendersDice = List.generate(3, (index) => index = Random().nextInt(6) + 1);
 
   var attackersLostTroops = 0;
   var defenderLostTroops = 0;
-
-  void calculateResults() {}
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +31,7 @@ class _DadosPageState extends State<DadosPage> {
                       child: Icon(
                 Icons.emoji_events,
                 color: Colors.grey,
-                size: 24.0,
+                size: 30.0,
                 semanticLabel: 'Results',
               )))
             ]),
@@ -51,10 +48,10 @@ class _DadosPageState extends State<DadosPage> {
                         child: Icon(
                       Icons.local_fire_department_outlined,
                       color: Colors.red,
-                      size: 24.0,
+                      size: 30.0,
                       semanticLabel: 'Attackers',
                     )),
-                    TextSpan(text: " $attackersLostTroops", style: const TextStyle(color: Colors.red, fontSize: 24)),
+                    TextSpan(text: " $attackersLostTroops", style: const TextStyle(color: Colors.red, fontSize: 30)),
                   ],
                 ),
               ))),
@@ -68,10 +65,10 @@ class _DadosPageState extends State<DadosPage> {
                         child: Icon(
                       Icons.shield,
                       color: Colors.yellow,
-                      size: 24.0,
+                      size: 30.0,
                       semanticLabel: 'Defenders',
                     )),
-                    TextSpan(text: " $defenderLostTroops", style: const TextStyle(color: Colors.yellow, fontSize: 24)),
+                    TextSpan(text: " $defenderLostTroops", style: const TextStyle(color: Colors.yellow, fontSize: 30)),
                   ],
                 ),
               )))
@@ -107,7 +104,7 @@ class _DadosPageState extends State<DadosPage> {
                         continue;
                       }
 
-                      if (attackersDice[i] < defendersDice[i]) {
+                      if (attackersDice[i] <= defendersDice[i]) {
                         attackersLostTroops--;
                         continue;
                       }

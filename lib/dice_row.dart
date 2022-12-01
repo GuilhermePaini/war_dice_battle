@@ -30,8 +30,8 @@ class _DiceRowState extends State<DiceRow> {
     }
 
     return const Text(
-      "0",
-      style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: labelFontSize),
+      '-1',
+      style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontSize: labelFontSize),
     );
   }
 
